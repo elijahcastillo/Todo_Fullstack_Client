@@ -32,7 +32,7 @@ const ProtectedRoute = () => {
       .catch((error) => {
         //both access & refresh token were bad, back to login
         navigate("/");
-        console.log(error.response.data.error);
+        console.log(error);
       });
   };
 
@@ -53,7 +53,7 @@ const ProtectedRoute = () => {
       .catch((error) => {
         //access token either dosent exist or is expired
         refreshToken();
-        return console.log(error.response.data.error);
+        console.log(error);
       });
   }, [accessToken]);
 
