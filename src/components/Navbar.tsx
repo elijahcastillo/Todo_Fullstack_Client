@@ -28,7 +28,7 @@ const Navbar = () => {
   const logoutUser = () => {
     axios
       .post(
-        "http://localhost:3001/auth/logout",
+        "https://todo-fullstack-client.herokuapp.com/auth/logout",
         { test: "ok" },
         { withCredentials: true }
       )

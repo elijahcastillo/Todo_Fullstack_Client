@@ -38,7 +38,7 @@ const Login = () => {
 
     const response = await axios
       .post(
-        "http://localhost:3001/auth/login",
+        "https://todo-fullstack-client.herokuapp.com/auth/login",
         {
           username,
           password,
@@ -70,7 +70,7 @@ const Login = () => {
     }
     setLoading(true);
     const response = await axios
-      .post("http://localhost:3001/auth/register", {
+      .post("https://todo-fullstack-client.herokuapp.com/auth/register", {
         username,
         password,
       } as UserCredentials)
