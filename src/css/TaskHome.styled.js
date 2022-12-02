@@ -100,8 +100,8 @@ export const StyledTaskItem = styled.div`
   }
 
   .icon {
-    width: 35px;
-    height: 35px;
+    width: 2.5rem;
+    height: 2.5rem;
     cursor: pointer;
   }
 
