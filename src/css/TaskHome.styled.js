@@ -100,8 +100,8 @@ export const StyledTaskItem = styled.div`
   }
 
   .icon {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 38px;
+    height: 38px;
     cursor: pointer;
   }
 
@@ -132,6 +132,13 @@ export const StyledTaskItem = styled.div`
   .edit:hover {
     path {
       fill: blue;
+    }
+  }
+
+  @media only screen and (max-width: 900px) {
+    .icon {
+      width: 65px;
+      height: 40px;
     }
   }
 `;
