@@ -83,7 +83,7 @@ export const StyledTaskItem = styled.div`
     width: 100%;
 
     .content {
-      font-size: 1.1em;
+      font-size: 1.4rem;
     }
 
     .contentDate {
