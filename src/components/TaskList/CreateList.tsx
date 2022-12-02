@@ -21,26 +21,28 @@ const CreateList = () => {
   return (
     <StyledCreateList>
       <div className="offsetContainer">
-        <StyledCreate>
-          <h1 className="title">Create New Task List</h1>
-          <div className="newTaskContainer">
-            <div className="newTaskInputWrapper">
-              <div className="newTaskInput">
-                <h3 className="inputTitle">Name</h3>
-                <input
-                  className="inp"
-                  type="text"
-                  placeholder="ex: Homework"
-                  value={listName}
-                  onChange={(e) => setListName(e.target.value)}
-                />
+        <div className="listWrapper">
+          <StyledCreate>
+            <h1 className="title">Create New Task List</h1>
+            <div className="newTaskContainer">
+              <div className="newTaskInputWrapper">
+                <div className="newTaskInput">
+                  <h3 className="inputTitle">Name</h3>
+                  <input
+                    className="inp"
+                    type="text"
+                    placeholder="ex: Homework"
+                    value={listName}
+                    onChange={(e) => setListName(e.target.value)}
+                  />
+                </div>
+              </div>
+              <div className="newTaskFooter">
+                <button onClick={addTask}>Create List</button>
               </div>
             </div>
-            <div className="newTaskFooter">
-              <button onClick={addTask}>Create List</button>
-            </div>
-          </div>
-        </StyledCreate>
+          </StyledCreate>
+        </div>
         <Link to="/home/all">
           <button className="backBtn">Back</button>
         </Link>

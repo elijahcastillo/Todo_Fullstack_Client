@@ -2,16 +2,20 @@ import React, { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { StyledCreate } from "../../css/TaskHome.styled";
 import { useUpdateTaskItemMutation } from "../../redux/api";
+import { toast } from "react-toastify";
 
 const EditItem = () => {
   const { taskId, oldText, oldDate } = useParams();
-  const [newName, setNewName] = useState(oldText);
+  const [newName, setNewName] = useState<any>(oldText);
   const [newDate, setNewDate] = useState(oldDate);
 
   const [updateTask] = useUpdateTaskItemMutation();
   const navigate = useNavigate();
 
   const editTask = () => {
+    if (newName.length === 0) {
+      return toast.error("Task Title is required");
+    }
     updateTask({ taskId, newName, newDate });
     navigate(-1);
   };

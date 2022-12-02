@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { StyledCreate } from "../../css/TaskHome.styled";
 import { useParams } from "react-router-dom";
 import { useAddTaskItemMutation } from "../../redux/api";
+import { toast } from "react-toastify";
 
 const CreateTaskItem = () => {
   const [taskName, setTaskName] = useState<string>("");
@@ -11,6 +12,9 @@ const CreateTaskItem = () => {
   const [addNewItem] = useAddTaskItemMutation();
 
   const addItem = () => {
+    if (taskName.length === 0) {
+      return toast.error("Task Title is required");
+    }
     addNewItem({
       name: taskName,
       date: taskDate,

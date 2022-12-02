@@ -1,6 +1,9 @@
 import styled from "styled-components";
 
 export const StyledCreateList = styled.div`
+  .listWrapper {
+    margin-top: 100px;
+  }
   .backBtn {
     border: none;
     padding: 0.5rem 2rem;
