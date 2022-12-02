@@ -46,16 +46,16 @@ const Login = () => {
         { withCredentials: true }
       )
       .catch((error) => {
-        toast.error(error.response);
-        return console.log(error);
+        console.log(error);
+        toast.error(error.response.data.error);
+        return;
       });
 
     setLoading(false);
-    console.log(response, "LLL");
 
     //request never reached server
     if (!response) {
-      return toast.error("Something went Wrong");
+      return;
     }
 
     //request returned 200
@@ -75,15 +75,16 @@ const Login = () => {
         password,
       } as UserCredentials)
       .catch((error) => {
-        toast.error("Could Not Create New Account");
+        console.log(error.response.data.error);
+        toast.error(error.response.data.error);
         setLoading(false);
-        return console.log(error.response.data.error);
+        return;
       });
 
     setLoading(false);
     //request never reached server
     if (!response) {
-      return toast.error("Something went Wrong");
+      return;
     }
 
     toast.success("Account Created!");
