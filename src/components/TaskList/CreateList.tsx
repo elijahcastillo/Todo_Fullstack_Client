@@ -11,8 +11,8 @@ const CreateList = () => {
   const [addNewTask] = useAddTaskListMutation();
 
   const addTask = () => {
-    if (listName.length > 40) {
-      return toast.error("List Name too long");
+    if (listName.length > 40 || listName.length === 0) {
+      return toast.error("List must be filled, and less than 40 letters ");
     }
     addNewTask({ name: listName });
     setListName("");

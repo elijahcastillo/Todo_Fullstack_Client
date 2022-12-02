@@ -18,7 +18,7 @@ const FilterTaskItems = () => {
   const delList = () => {
     deleteList({ listId });
     navigate("/home/all");
-    toast.success("List Deleated");
+    toast.success("List Deleted");
   };
 
   return (
