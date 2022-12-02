@@ -66,7 +66,7 @@ const FilterTaskItems = () => {
           }
           onClick={() => dispatch(setSort(ItemDateSort.ASCENDING))}
         >
-          Up
+          Old-New
         </div>
 
         <div
@@ -77,7 +77,7 @@ const FilterTaskItems = () => {
           }
           onClick={() => dispatch(setSort(ItemDateSort.DESCENDING))}
         >
-          Down
+          New-Old
         </div>
       </div>
       <button className="DelList" onClick={delList}>
