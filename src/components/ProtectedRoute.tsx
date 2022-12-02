@@ -19,7 +19,7 @@ const ProtectedRoute = () => {
 
   const refreshToken = () => {
     axios
-      .get("http://localhost:3001/refresh", {
+      .get("https://todo-fullstack-client.herokuapp.com/refresh", {
         withCredentials: true,
       })
       .then((res) => {
@@ -39,7 +39,7 @@ const ProtectedRoute = () => {
   useEffect(() => {
     axios
       .get(
-        "http://localhost:3001/auth/check-token",
+        "https://todo-fullstack-client.herokuapp.com/auth/check-token",
 
         { headers: { authorization: `bearer ${accessToken}` } }
       )
