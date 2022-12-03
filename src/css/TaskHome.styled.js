@@ -74,13 +74,17 @@ export const StyledTaskItem = styled.div`
   width: 100%;
   min-height: 50px;
   //outline: 1px solid red;
+  border-bottom: 1px solid grey;
+  padding-bottom: 15px;
   margin-top: 15px;
+
   display: flex;
   gap: 20px;
   font-family: "Rubik", sans-serif;
 
   .contentContainer {
     width: 100%;
+    word-wrap: break-word;
 
     .content {
       font-size: 1.4rem;
@@ -136,8 +140,13 @@ export const StyledTaskItem = styled.div`
   }
 
   @media only screen and (max-width: 900px) {
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 35px;
+    padding-bottom: 25px;
+
     .icon {
-      width: 65px;
+      width: 32px;
       height: 40px;
     }
   }
